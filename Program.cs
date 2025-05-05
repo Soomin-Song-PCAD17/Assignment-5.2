@@ -28,15 +28,39 @@ void mainMenu()
                 Console.WriteLine("2. Write a program in C# Sharp to print the first n natural number using recursion.");
                 Console.Write("How many numbers to print: ");
                 int value2;
-                int.TryParse(Console.ReadLine(), out value2);
-                AssignmentMethods.RecursivePrintNaturalNumbers(value2);
+                bool flag2 = false;
+                while (!flag2)
+                {
+                    flag2 = int.TryParse(Console.ReadLine(), out value2);
+                    if (flag2)
+                    {
+                        AssignmentMethods.RecursivePrintNaturalNumbers(value2);
+                        break;
+                    }
+                    else
+                    {
+                        Console.Write("Input is not an integer. How many numbers to print: ");
+                    }
+                }
                 break;
             case '3':
                 Console.WriteLine("3. Write a program in C# Sharp to print numbers from n to 1 using recursion.");
                 Console.Write("How many numbers to print: ");
                 int value3;
-                int.TryParse(Console.ReadLine(), out value3);
-                AssignmentMethods.RecursivePrintNaturalNumbers(value3);
+                bool flag3 = false;
+                while (!flag3)
+                {
+                    flag3 = int.TryParse(Console.ReadLine(), out value3);
+                    if (flag3)
+                    {
+                    AssignmentMethods.RecursivePrintNaturalNumbersReverse(value3);
+                    break;
+                    }
+                    else
+                    {
+                        Console.Write("Input is not an integer. How many numbers to print: ");
+                    }
+                }
                 break;
             case '4':
                 Console.WriteLine("4. Write a program in C# Sharp to check whether a given string is Palindrome or not using recursion.");
