@@ -26,13 +26,20 @@ void mainMenu()
                 break;
             case '2':
                 Console.WriteLine("2. Write a program in C# Sharp to print the first n natural number using recursion.");
-                AssignmentMethods.RecursivePrintNaturalNumbers(10);
+                Console.Write("How many numbers to print: ");
+                int value2;
+                int.TryParse(Console.ReadLine(), out value2);
+                AssignmentMethods.RecursivePrintNaturalNumbers(value2);
                 break;
             case '3':
                 Console.WriteLine("3. Write a program in C# Sharp to print numbers from n to 1 using recursion.");
-                AssignmentMethods.RecursivePrintNaturalNumbersReverse(10);
+                Console.Write("How many numbers to print: ");
+                int value3;
+                int.TryParse(Console.ReadLine(), out value3);
+                AssignmentMethods.RecursivePrintNaturalNumbers(value3);
                 break;
             case '4':
+                Console.WriteLine("4. Write a program in C# Sharp to check whether a given string is Palindrome or not using recursion.");
                 break;
             case 'q':
                 Console.WriteLine("Quitting program...");
