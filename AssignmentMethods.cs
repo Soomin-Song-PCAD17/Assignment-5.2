@@ -30,6 +30,11 @@ namespace Assignment_5._2
             RecursivePrintNaturalNumbersReverse(n-1);
         }
 
-
+        public static bool IsPalindromeRecursion(string s)
+        {
+            if(s.Length<=1) { return true; }
+            if (s[0] != s[s.Length-1]) { return false; }
+            return IsPalindromeRecursion(s.Substring(1,s.Length-2));
+        }
     }
 }

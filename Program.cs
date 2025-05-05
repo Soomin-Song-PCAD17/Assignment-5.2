@@ -64,6 +64,9 @@ void mainMenu()
                 break;
             case '4':
                 Console.WriteLine("4. Write a program in C# Sharp to check whether a given string is Palindrome or not using recursion.");
+                Console.Write("Input a string: ");
+                string s = Console.ReadLine();
+                Console.WriteLine($"Is '{s}' a palindrome: {AssignmentMethods.IsPalindromeRecursion(s)}");
                 break;
             case 'q':
                 Console.WriteLine("Quitting program...");
