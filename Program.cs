@@ -16,22 +16,30 @@ void mainMenu()
         Console.WriteLine("q: quit");
         choice = Console.ReadKey().KeyChar;
         Console.WriteLine();
+        Console.Clear();
         switch (choice)
         {
             case '1':
-                Console.Clear();
                 Console.WriteLine("1. Given a string s consisting of words and spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.\n");
                 AssignmentMethods.LengthOfLastWord("Hello World");
                 AssignmentMethods.LengthOfLastWord(" fly me to the moon ");
-
                 break;
             case '2':
+                Console.WriteLine("2. Write a program in C# Sharp to print the first n natural number using recursion.");
+                AssignmentMethods.RecursivePrintNaturalNumbers(10);
                 break;
             case '3':
+                Console.WriteLine("3. Write a program in C# Sharp to print numbers from n to 1 using recursion.");
+                AssignmentMethods.RecursivePrintNaturalNumbersReverse(10);
                 break;
             case '4':
                 break;
+            case 'q':
+                Console.WriteLine("Quitting program...");
+                return;
         }
-        Console.WriteLine();
+        Console.WriteLine("\nPress any key to continue.");
+        Console.ReadKey();
+        Console.Clear();
     } while (choice != 'q');
 }

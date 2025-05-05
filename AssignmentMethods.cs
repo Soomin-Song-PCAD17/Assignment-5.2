@@ -15,5 +15,21 @@ namespace Assignment_5._2
             Console.WriteLine($"The last word is '{words[words.Length-1]}' with Length {words[words.Length - 1].Length}");
             return words[words.Length - 1].Length;
         }
+
+        public static void RecursivePrintNaturalNumbers(int n)
+        {
+            if (n <= 0) { return; }
+            RecursivePrintNaturalNumbers(n-1);
+            Console.Write($"{n} ");
+        }
+
+        public static void RecursivePrintNaturalNumbersReverse(int n)
+        {
+            if (n <= 0) { return; }
+            Console.Write($"{n} ");
+            RecursivePrintNaturalNumbersReverse(n-1);
+        }
+
+
     }
 }
