@@ -21,17 +21,17 @@ void mainMenu()
         {
             case '1':
                 Console.WriteLine("1. Given a string s consisting of words and spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.\n");
-                AssignmentMethods.LengthOfLastWord("Hello World");
-                AssignmentMethods.LengthOfLastWord(" fly me to the moon ");
+                Console.Write("Input a string: ");
+                string value1 = Console.ReadLine();
+                AssignmentMethods.LengthOfLastWord(value1);
                 break;
             case '2':
                 Console.WriteLine("2. Write a program in C# Sharp to print the first n natural number using recursion.");
                 Console.Write("How many numbers to print: ");
-                int value2;
                 bool flag2 = false;
                 while (!flag2)
                 {
-                    flag2 = int.TryParse(Console.ReadLine(), out value2);
+                    flag2 = int.TryParse(Console.ReadLine(), out int value2);
                     if (flag2)
                     {
                         AssignmentMethods.RecursivePrintNaturalNumbers(value2);
@@ -46,15 +46,14 @@ void mainMenu()
             case '3':
                 Console.WriteLine("3. Write a program in C# Sharp to print numbers from n to 1 using recursion.");
                 Console.Write("How many numbers to print: ");
-                int value3;
                 bool flag3 = false;
                 while (!flag3)
                 {
-                    flag3 = int.TryParse(Console.ReadLine(), out value3);
+                    flag3 = int.TryParse(Console.ReadLine(), out int value3);
                     if (flag3)
                     {
-                    AssignmentMethods.RecursivePrintNaturalNumbersReverse(value3);
-                    break;
+                        AssignmentMethods.RecursivePrintNaturalNumbersReverse(value3);
+                        break;
                     }
                     else
                     {
@@ -65,8 +64,8 @@ void mainMenu()
             case '4':
                 Console.WriteLine("4. Write a program in C# Sharp to check whether a given string is Palindrome or not using recursion.");
                 Console.Write("Input a string: ");
-                string s = Console.ReadLine();
-                Console.WriteLine($"Is '{s}' a palindrome: {AssignmentMethods.IsPalindromeRecursion(s)}");
+                string value4 = Console.ReadLine();
+                Console.WriteLine($"Is '{value4}' a palindrome: {AssignmentMethods.IsPalindromeRecursion(value4)}");
                 break;
             case 'q':
                 Console.WriteLine("Quitting program...");
